@@ -8,18 +8,23 @@ return new class extends Migration
 {
     /**
      * Run the migrations.
+     * Create TABLE 'trains' (
+     *              'id' UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+     *              'azienda' VARCHAR(255) NOT NULL,
+     *              'stazione
+     * )
      */
     public function up(): void
     {
         Schema::create('trains', function (Blueprint $table) {
             $table->id();
             $table->string('azienda');
-            $table->string('stazione di arrivo');
-            $table->time('orario di partenza');
-            $table->time('orario di arrivo');
-            $table->string('codice treno');
-            $table->unsignedTinyInteger('numero carrozze');
-            $table->boolean('in orario');
+            $table->string('stazione_arrivo');
+            $table->time('orario_partenza');
+            $table->time('orario_arrivo');
+            $table->string('codice_treno');
+            $table->unsignedTinyInteger('numero_carrozze');
+            $table->boolean('in_orario');
             $table->boolean('cancellato');
             $table->timestamps();
         });
