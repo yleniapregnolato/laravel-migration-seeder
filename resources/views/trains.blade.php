@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<h1>TRENI:</h1>
+<h1 class="text-center">TRENI</h1>
 
 
     @foreach ($trains as $train)
