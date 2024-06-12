@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class TrainController extends Controller
 {
     public function index() {
-        // $today = now();
+        $today = now();
 
-        $trains = Train::all();
-        // $trains = Train::where("data_partenza", "=", $today)->get();
+        // $trains = Train::all();
+        $trains = Train::where("data_partenza", ">=", $today)->get();
         return view('trains', compact('trains'));
     }
 }
