@@ -2,9 +2,6 @@
 
 @section('content')
     <h1 class="text-center">TRENI</h1>
-
-
-
     <table class="table">
         <thead>
             <tr>
